@@ -1,0 +1,478 @@
+.container {
+  margin: 10px auto 0 auto;
+}
+
+.product-details-container {
+  display: flex;
+}
+
+.image {
+  flex: 1;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  min-width: 100%;
+  /* width: 100%;
+  height: 100%; */
+  width: 548px;
+  height: 588px;
+
+  border-radius: 20px;
+  border: 1px solid #9f9f9f;
+  /* background: #C4C4C4; */
+}
+
+.product-title h1 {
+  padding-top: 12px;
+  color: #121212;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines you want to display */
+  overflow: hidden;
+}
+
+.product-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  padding: 10px;
+}
+
+.product-reating {
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.product-reating span {
+  color: #888888;
+}
+
+.product-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.p1 {
+  font-weight: 600;
+  color: #121212;
+}
+
+del,
+.p2 {
+  color: #878787 !important;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.product-color {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.color-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-button {
+  background-color: #456ed6;
+  color: #fff;
+  width: 300px;
+  padding: 18px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.color-option {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.color-box {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #888888;
+  border-radius: 10%;
+  position: relative;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox + .color-box.red {
+  background-color: #ff0000;
+  /* Red */
+  border-color: #ff0000;
+}
+
+.checkbox + .color-box.blue {
+  background-color: #0000ff;
+  /* Blue */
+  border-color: #0000ff;
+}
+
+.checkbox + .color-box.green {
+  background-color: #008000;
+  /* Green */
+  border-color: #008000;
+}
+
+.checkbox:checked + .color-box::before {
+  content: "✔";
+  /* Add a checkmark inside the checkbox */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  color: #fff;
+  /* Checkmark color */
+}
+
+.color-option {
+  color: #121212;
+  font-size: large;
+}
+
+.color-left {
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.product-add-to-cart {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 27px;
+  left: 20px;
+  align-items: center;
+
+}
+
+.product-desc p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  text-transform: capitalize;
+}
+
+.description {
+  padding: 40px 10px 10px 10px;
+}
+
+.upper {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  opacity: 0.8;
+}
+
+.upper span {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  opacity: 0.6;
+}
+
+hr {
+  stroke-width: 1px;
+  stroke: #c4c4c4;
+}
+
+.product-size {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.left-size {
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.size-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  width: 56px;
+  height: 52px;
+  border-radius: 20px;
+  border: 1px solid #456ed6;
+  background: rgba(69, 110, 214, 0.1);
+
+  color: #456ed6;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.8;
+}
+
+
+.right-size{
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 468px) {
+
+
+  .product-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+
+  .image {
+    flex: 1;
+    padding: 0 5px;
+  }
+
+  img {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .product-title h1 {
+    padding-top: 2px;
+    font-family: Poppins;
+    font-size: 24px;
+  }
+
+  .product-details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding: 0 5px;
+  }
+
+  .product-reating {
+    font-size: 18px;
+  }
+
+
+  .product-price {
+    gap: 8px;
+    font-size: 24px;
+  }
+
+
+  .product-color {
+    gap: 14px;
+  }
+
+  .color-right {
+    gap: 10px;
+  }
+
+
+  /* ///////////////////////// */
+
+
+  .login-button {
+
+    height: auto;
+    width: auto;
+
+
+    padding: 14px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+
+
+  .color-option {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .color-box {
+    display: flex;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #888888;
+    border-radius: 50%;
+    position: relative;
+  }
+
+
+
+
+  .checkbox:checked + .color-box::before {
+    content: "✔";
+    /* Add a checkmark inside the checkbox */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+    /* Checkmark color */
+  }
+
+
+  .color-left {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+
+
+
+
+
+
+
+
+  .product-add-to-cart {
+    display: flex;
+    gap: 14px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    margin-top: 8px;
+  }
+
+  .product-desc p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .description {
+    padding: 20px 5px 20px 5px;
+  }
+
+  .upper {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    opacity: 0.8;
+  }
+
+  .upper span {
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    opacity: 0.6;
+  }
+
+  hr {
+    stroke-width: 1px;
+    stroke: #c4c4c4;
+  }
+
+
+
+
+
+
+  .product-size {
+    gap: 14px;
+  }
+
+  .left-size {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .size-box {
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+
+  .right-size{
+    display: flex;
+    gap: 10px;
+  }
+
+
+
+
+  svg{
+    width: 43px;
+    height: 43px;
+  }
+
+
+
+}

@@ -1,0 +1,158 @@
+<div class="container">
+
+  <div class="product-details-container">
+
+    <div class="image">
+      <img [src]="product.productImages[selectedProductIndex].url" alt="Product Image">
+    </div>
+
+
+
+
+    <div class="product-details">
+
+      <div class="product-title">
+        <h1>{{product.productName}}</h1>
+      </div>
+
+
+      <div class="product-price">
+        <span class="p1">₹{{product.productDiscountedPrice}}</span>
+        <del>
+          <span class="p2">₹{{product.productActualPrice}}</span>
+        </del>
+      </div>
+
+      <div class="product-reating">
+        <span>⭐4.6 rating (139 Reviews)</span>
+      </div>
+
+
+
+      <div class="product-color" (click)="checkbox()">
+        <div class="color-left">
+          Color
+        </div>
+        <div class="color-right">
+          <label class="color-option">
+            <input type="checkbox" class="checkbox">
+            <span class="color-box red"></span>
+          </label>
+          <label class="color-option">
+            <input type="checkbox" class="checkbox">
+            <span class="color-box blue"></span>
+          </label>
+          <label class="color-option">
+            <input type="checkbox" class="checkbox">
+            <span class="color-box green"></span>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="product-size">
+        <div class="left-size">
+          Sizes
+        </div>
+        <div class="right-size">
+
+
+
+          <div *ngFor="let size of sizes; let i = index" class="size-box" (click)="changeBackgroundColor(i)"
+            [style.background-color]="i === selectedSizeIndex ? '#456ed633' : '#ffffff'">
+            {{ size }}
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="product-add-to-cart">
+
+
+
+          <button (click)="addToCart(product.productId)" class="login-button">ADD TO CART</button>
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <rect x="0.5" y="0.5" width="79" height="79" rx="19.5" fill="#456ED6" fill-opacity="0.1" stroke="#456ED6" />
+            <path
+              d="M47.5 43.6C46.018 43.6 44.712 44.3291 43.8917 45.4378L36.7995 41.8062C36.9173 41.4048 37 40.9889 37 40.55C37 39.9547 36.8779 39.3888 36.6671 38.8682L44.0893 34.4018C44.9153 35.3712 46.1295 36 47.5 36C49.9815 36 52 33.9815 52 31.5C52 29.0185 49.9815 27 47.5 27C45.0186 27 43 29.0185 43 31.5C43 32.0719 43.1177 32.6143 43.3131 33.1179L35.8688 37.5974C35.0435 36.6568 33.8469 36.05 32.5 36.05C30.0185 36.05 28 38.0686 28 40.55C28 43.0315 30.0185 45.05 32.5 45.05C34.0065 45.05 35.3346 44.2996 36.1518 43.1597L43.2206 46.7794C43.0904 47.1997 43 47.6375 43 48.1C43 50.5815 45.0186 52.6 47.5 52.6C49.9815 52.6 52 50.5815 52 48.1C52 45.6186 49.9815 43.6 47.5 43.6Z"
+              fill="#456ED6" />
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <rect x="0.5" y="0.5" width="79" height="79" rx="19.5" fill="#456ED6" fill-opacity="0.1" stroke="#456ED6" />
+            <path
+              d="M34.28 31C37.516 31.001 39.253 34.491 40 36.031C40.75 34.484 42.469 31.01 45.726 31.01C47.784 31.01 50 32.319 50 35.192C50 38.634 45.256 43.043 40 48.192C34.742 43.041 30 38.633 30 35.192C30 32.516 31.965 30.999 34.28 31ZM34.281 29C31.098 29 28 31.187 28 35.192C28 39.853 33.57 44.619 40 51C46.43 44.619 52 39.853 52 35.192C52 31.181 48.903 29.01 45.726 29.01C43.522 29.01 41.28 30.052 40 32.248C38.715 30.042 36.478 29 34.281 29Z"
+              fill="#456ED6" stroke="#456ED6" />
+          </svg>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="description">
+    <div class="upper">
+      <p>Description</p>
+      <span>Specification</span>
+
+
+
+    </div>
+    <hr>
+    <div class="down">
+      <div class="product-desc">
+        <p> {{product.productDescription}} </p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <!-- //description -->
+
+
+</div>

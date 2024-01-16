@@ -1,0 +1,24 @@
+.conform{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.login-button {
+  background-color: #456ED6;
+  color: #fff;
+  width: 100%;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: 600;
+  border-radius: 8px;
+  letter-spacing: 2px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}

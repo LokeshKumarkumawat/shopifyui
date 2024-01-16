@@ -1,0 +1,112 @@
+<div class="container">
+  <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+
+
+    <div class="cart-wapper">
+
+
+      <div class="left">
+        <div class="cart-title">
+          Add Products
+        </div>
+
+
+        <div class="cart-items">
+
+
+          <div class="parent">
+            <div class="input-box">
+              <label for="">Product Name</label>
+              <input [(ngModel)]="product.productName" name="productName" type="text" placeholder="Product Name">
+            </div>
+          </div>
+
+          <div class="parent">
+            <div class="input-box">
+              <label>Product Description</label>
+              <textarea rows="5" [(ngModel)]="product.productDescription" name="productDescription" matInput
+                placeholder="Product Description"></textarea>
+            </div>
+          </div>
+
+          <div class="parent">
+            <div class="input-box">
+              <label>Product Actual Price</label>
+              <input [(ngModel)]="product.productDiscountedPrice" name="productDiscountedPrice" matInput
+                placeholder="Product Actual Price">
+            </div>
+            <div class="input-box">
+              <label>Product Discounted Price</label>
+              <input [(ngModel)]="product.productActualPrice" name="productActualPrice" matInput
+                placeholder="Product Discounted Price">
+            </div>
+            <!-- [(ngModel)]="orderDetails.alternateContactNumber" -->
+          </div>
+
+          <div class="parent gap">
+            <div class="input-box">
+              <label>Product Category</label>
+              <input [(ngModel)]="product.productCategorie" name="productCategorie" matInput
+                placeholder="Product Category">
+            </div>
+
+
+            <div class="input-boxx">
+
+
+
+
+              <div class="dropzone" appDrag (files)="fileDropped($event)">
+                <div class="text-wrapper">
+                  <div class="text-centered">
+                    <button (click)="selectFile.click()" class="btn">Add File</button>
+                  </div>
+                </div>
+
+                <input style="display: none;" type="file" multiple value="select" #selectFile
+                  (change)="onFileSelected($event)">
+              </div>
+
+
+              <div class="end">
+                <button class="btn" type="submit" *ngIf="isNewProduct" style="margin-right: 3px;">Add Product</button>
+                <button class="btn" type="submit" *ngIf="!isNewProduct">Update Product</button>
+              </div>
+              <button class="btn">Clear</button>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+  </form>
+
+
+
+  <div class="image-box">
+
+    <div class="" *ngFor="let file of product.productImages; let i = index;">
+      <div style="position: relative" class="image-box">
+        <span class="btn-remove-image" (click)="removeImages(i)">
+          ✖
+        </span>
+        <img [src]="file.url" width="100px" height="100px">
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+</div>

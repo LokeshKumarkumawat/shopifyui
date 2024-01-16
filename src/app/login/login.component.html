@@ -1,0 +1,94 @@
+
+
+<div class="container">
+
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+      <div class="login-container">
+        <h1 class="login-title">Login</h1>
+
+
+
+        <div class="input-login">
+          <input ngModel name="userFirstName" id="userFirstName" type="text" placeholder="First Name">
+          <input ngModel name="userPassword" id="userPassword" type="password" placeholder="Password">
+        </div>
+
+
+
+        <div class="forgot-pass">
+          <p class="forgotten-pass">Forgot password?</p>
+        </div>
+
+
+        <button type="submit" class="login-button">Login</button>
+        <!-- <p>or</p> -->
+        <!-- <div class="social-btn">
+        <button class="social-button">Google</button>
+        <button class="social-button">Facebook</button>
+      </div> -->
+
+        <div class="signup">
+          <p class="forgotten-pass">Don’t have an account? <span routerLink="/register">Sign up</span> </p>
+        </div>
+
+
+      </div>
+
+
+  </form>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class=" container">
+  <div class="author-card">
+      <div class="author-info">
+          <p class="author-name" >Admin Dashboard</p>
+          <p class="author-description">username : admin <br> password : admin </p>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="container hidden">
+  <button class="admin" (click)="onButtonClick()">Admin Login Credentials</button>
+</div>
+
+
+
+<!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+<!-- <div class="toast active">
+
+
+  <i class="fa-solid fa-xmark close"></i>
+
+
+  <div class="progress active"></div>
+</div> -->
+
+
+
+
+
+
+
+<div #toast class="toast hidden">
+  <div class="message">
+    <span class="text text-1">UserName : admin</span><br>
+    <span class="text text-1">Password: admin</span>
+    <div #progress class="progress"></div>
+  </div>
+</div>
+
+

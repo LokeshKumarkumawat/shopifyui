@@ -1,0 +1,48 @@
+<div class="container">
+
+  <h1 *ngIf="isShow"  class="order-msg">No orders for you right now</h1>
+
+  <table *ngIf="!isShow" class="rwd-table">
+    <tbody>
+      <tr>
+        <th>ID</th>
+        <th>Order Name</th>
+        <th>Email</th>
+        <th>Product Name</th>
+        <th>Amount</th>
+        <th>Payment Id</th>
+        <th>Status</th>
+      </tr>
+      <tr *ngFor="let p of myOrderDetails">
+
+        <td data-th="Id">
+          {{p.orderId}}
+        </td>
+
+        <td data-th="User Name">
+          {{p.orderFirstName}}
+        </td>
+
+        <td data-th="Order Name">
+          {{p.orderEmailAddress}}
+        </td>
+        <td data-th="Product Name">
+          {{p.product.productName}}
+        </td>
+
+        <td data-th="Amount">
+          {{p.product.productDiscountedPrice}}
+        </td>
+
+        <td data-th="Payment Id">
+          {{p.transactionId}}
+        </td>
+        <td data-th="Status">
+          <span class="delivered">{{p.orderStatus}}</span>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

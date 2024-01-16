@@ -1,0 +1,316 @@
+        /* Header Styles */
+
+
+        .container {
+          max-width: 1280px;
+          margin: 0px auto;
+          padding: 5px 10px 5px 10px;
+          /* background-color: #fff; */
+          /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+        }
+
+        .out-container {
+          /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+          /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+
+          box-shadow: 0px 2px 2.6px rgba(0, 0, 0, 0.15);
+        }
+
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #FFFFFF;
+          color: #000000;
+          padding: 10px;
+        }
+
+        .header-left {
+          flex: 0.5;
+          font-size: 24px;
+          font-weight: 600;
+          color: #456ED6;
+        }
+
+        .header-left h1 {
+          font-size: 24px;
+          font-weight: 600;
+          color: #456ED6;
+        }
+
+        .header-middle {
+          display: flex;
+          flex: content;
+          justify-content: flex-start;
+          gap: 20px;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: #121212;
+        }
+
+        .header-right {
+          display: flex;
+          flex: end;
+          justify-content: center;
+          justify-items: center;
+          gap: 20px;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: #121212;
+        }
+
+
+        .input-box {
+          position: relative;
+          display: inline-block;
+        }
+
+        .input-box svg {
+          position: absolute;
+          top: 8px;
+          right: 9px;
+          fill: #121212;
+          width: 25px;
+          height: 25px;
+        }
+
+        .input-search {
+          border: none;
+          outline: none;
+          background-color: #edf0f7;
+          padding: 11px 34px 11px 9px;
+          border-radius: 5px;
+          font-size: 18px;
+
+          ::placeholder {
+            color: #B2B3B7;
+          }
+
+        }
+
+        svg {
+          height: 28px;
+          width: 28px;
+        }
+
+        .login-button {
+          background-color: #456ED6;
+          color: #fff;
+          width: 100%;
+          padding: 11px 22px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 6px;
+          letter-spacing: 2px;
+        }
+
+        .login-button:hover {
+          background-color: #0056b3;
+        }
+
+        .icon {
+          display: flex;
+          justify-content: center;
+        }
+
+        /* Responsive Styles */
+
+
+
+
+
+        .navmenu h2 {
+          font-size: 16px;
+          font-weight: 600;
+          color: #222;
+          letter-spacing: 4px;
+          cursor: pointer;
+          text-transform: uppercase;
+          transition: 0.3s;
+        }
+
+        .navmenu h2:hover {
+          color: #7b00ff;
+          /* text-shadow: 0 0 5px #7141e9,
+                      0 0 25px #5407b2,
+                      0 0 50px #5400a3,
+                      0 0 100px #3a0055; */
+        }
+
+
+
+
+
+
+
+
+
+        .admin-butttons {
+          display: flex;
+          width: 100%;
+          gap: 40px;
+          justify-content: flex-end;
+          right: 0;
+        }
+
+        .btn {
+          background-color: #456ED6;
+          color: #fff;
+          /* width: 100%; */
+          padding: 8px 20px;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 10px;
+        }
+
+        .btn:hover {
+          background-color: #0056b3;
+        }
+
+
+
+
+        @media (max-width: 468px) {
+
+
+          /* Header Styles */
+
+
+          .container {
+            margin: 0px auto;
+            padding: 0px 3px 0px 3px;
+            /* background-color: #fff; */
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+          }
+
+          .out-container {
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+
+            box-shadow: 0px 2px 2.6px rgba(0, 0, 0, 0.15);
+          }
+
+          header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 5px;
+          }
+
+          .header-left {
+            flex: 0.5;
+            font-size: 24px;
+            font-weight: 600;
+            color: #456ED6;
+          }
+
+          .header-left h1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #456ED6;
+          }
+
+          .header-middle {
+            display: none;
+
+          }
+
+          .header-right {
+            gap: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #121212;
+          }
+
+
+
+
+
+
+
+
+
+          .login-button {
+            background-color: #456ED6;
+            color: #fff;
+            width: 100%;
+            padding: 5px 9px;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            letter-spacing: 1px;
+          }
+
+          .login-button:hover {
+            background-color: #0056b3;
+          }
+
+          .icon {
+            display: flex;
+            justify-content: center;
+          }
+
+          /* Responsive Styles */
+
+
+
+
+
+          .navmenu h2 {
+display: none;
+          }
+
+
+
+          .admin-butttons {
+            display: flex;
+            width: 100%;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            justify-items: center
+
+          }
+
+          .btn {
+            background-color: #456ED6;
+            color: #fff;
+            /* width: 100%; */
+            padding: 4px 9px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 10px;
+            text-align: center;
+          }
+
+          .btn:hover {
+            background-color: #0056b3;
+          }
+
+
+          .user-profile{
+            display: none;
+          }
+
+
+          .cart{
+            display: none;
+          }
+
+        }

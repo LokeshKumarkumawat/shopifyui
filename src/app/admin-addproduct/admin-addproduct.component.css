@@ -1,0 +1,379 @@
+/* General Styles */
+.container {
+  margin-bottom: 40px;
+}
+
+.cart-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.cart-wapper {
+  display: flex;
+  gap: 30px;
+}
+
+.left {
+  flex: 2;
+}
+
+.parent {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-boxx {
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+/* Buttons */
+.btn {
+  background-color: #456ED6;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Labels and Input Styling */
+label {
+  width: 100%;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.input-box input, .input-box textarea {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #9F9F9F;
+  font-weight: 500;
+  font-size: 18px;
+  resize: none;
+}
+
+/* Checkout Items */
+.checkout-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+  height: fit-content;
+  border-radius: 32px;
+  border: 1px solid #9F9F9F;
+  padding: 25px 24px 28px 24px;
+}
+
+
+
+
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  border: 1px solid #9f9f9f;
+  border-radius: 20px;
+  padding: 18px 37px;
+}
+
+.up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-and-title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.image-and-title h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.down button {
+  width: 100%;
+  padding: 9px;
+  border-radius: 15px;
+  border: 1px solid #456ED6;
+  outline: none;
+  color: #456ED6;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+}
+
+.button-div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid #9F9F9F;
+  width: 100%;
+  height: 78px;
+  color: #121212;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.summary p {
+  color: #121212;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space between;
+  align-items: center;
+  justify-self: center;
+  color: #121212;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.6;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: space between;
+  color: #121212;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.checkout-button {
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  margin: auto;
+}
+
+.checkout-button button {
+  border-radius: 15px;
+  background: #456ED6;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+.inc, .inc-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.nav {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid #546ED6;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 33px;
+  color: #546ED6;
+}
+
+.plus {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 33px;
+  background-color: #546ED6;
+  color: #FFFFFF;
+}
+
+.title-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-and-title img {
+  display: flex;
+  margin: auto;
+  max-width: 123px;
+  width: 100%;
+  height: 123px;
+  border-radius: 15px;
+  border: 1px solid #9F9F9F;
+}
+
+.custom-hr, hr {
+  background-color: #C4C4C4;
+  height: 1px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.x {
+  font-size: 35px;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 468px) {
+  .container {
+    margin-bottom: 0px;
+  }
+
+  .cart-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .input-boxx {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex: none;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .input-box input {
+    width: 95.5%;
+    padding: 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #9F9F9F;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .input-box label {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .input-box textarea {
+    width: 95.5%;
+    padding: 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #9F9F9F;
+    font-weight: 500;
+    font-size: 14px;
+    resize: none;
+  }
+
+  .btn {
+    background-color: #456ED6;
+    color: #fff;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+  }
+
+  .gap {
+    gap: 15px;
+  }
+}

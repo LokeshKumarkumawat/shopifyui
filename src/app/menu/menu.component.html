@@ -1,0 +1,30 @@
+
+
+
+<div class="container">
+
+
+
+  <nav>
+    <div class="nav-box">
+      <ul class="nav-container">
+        <li class="nav__item" *ngFor="let item of navItems" [ngClass]="{'active': item.active}"
+          (click)="selectNavItem(item)">
+          <a routerLink="{{item.link}}" class="nav__item-link">
+            <div class="nav__item-icon">
+              <!-- <ion-icon [name]="item.icon"></ion-icon> -->
+              <!-- <img [src]="item.icon" alt=""> -->
+              <!-- <div >{{item.icon}}</div> -->
+              <img src={{item.icon}} alt="Your SVG" />
+
+            </div>
+            <span class="nav__item-text">{{ item.text }}</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+</div>
+

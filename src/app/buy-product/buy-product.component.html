@@ -1,0 +1,176 @@
+<div class="container">
+  <!-- <form #orderForm="ngForm" (ngSubmit)="placeOrder(orderForm)"> -->
+    <form #orderForm="ngForm" (ngSubmit)="createTransactionAndplaceOrder(orderForm)">
+    <div class="cart-wapper">
+
+
+      <div class="left">
+        <div class="cart-title">
+          Checkout
+        </div>
+
+
+        <div class="cart-items">
+
+
+          <div class="parent">
+            <div class="input-box">
+              <label for="">FIRST NAME</label>
+              <input [(ngModel)]="orderDetails.firstName" name="firstName" type="text" placeholder="First Name">
+            </div>
+            <div class="input-box">
+              <label for="">LAST NAME</label>
+              <input [(ngModel)]="orderDetails.lastName" name="lastName" type="text" placeholder="Last Name">
+            </div>
+          </div>
+
+          <div class="parent">
+            <div class="input-box">
+              <label for="">EMAIL ID</label>
+              <input [(ngModel)]="orderDetails.emailAddress" name="emailAddress" type="text" placeholder="Enter Your Email">
+            </div>
+            <div class="input-box">
+              <label for="">CONTACT</label>
+              <input [(ngModel)]="orderDetails.contactNumber" name="contactNumber" type="text"
+                placeholder="Contact No.">
+            </div>
+            <!-- [(ngModel)]="orderDetails.alternateContactNumber" -->
+          </div>
+
+          <div class="parent">
+            <div class="input-box">
+              <label for="">ADDRESS</label>
+              <input [(ngModel)]="orderDetails.fullAddress" name="fullAddress" type="text" placeholder="Address">
+            </div>
+          </div>
+
+
+          <div class="parent">
+            <div class="input-box">
+              <label for="">CITY / TOWN</label>
+              <input [(ngModel)]="orderDetails.cityTown" name="cityTown" type="text" placeholder="City / Town">
+            </div>
+            <div class="input-box">
+              <label for="">POSTCODE / ZIP</label>
+              <input [(ngModel)]="orderDetails.postCode" name="postCode" type="text" placeholder="Postcode/ ZIP">
+            </div>
+          </div>
+
+          <div class="parent">
+            <div class="input-box">
+              <label for="">MESSAGE</label>
+              <textarea id="myTextarea" rows="3" [(ngModel)]="orderDetails.orderMessage" name="orderMessage"
+                placeholder="Leave a Message"></textarea>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+      <div class="right">
+
+        <div class="summary">
+          <p>Products</p>
+          <div class="total-price" *ngFor="let product of productDetails">
+            <p class="line-limite">{{product.productName}}</p>
+
+
+
+            <!-- <td class="product-total select-prices">
+              <div class="sdiv1">
+                <span class="sspan"> <select class="form-select" #quantity
+                    [ngModel]="getQuantityForProduct(product.productId)"
+                    (change)="onQuantityChanged(quantity.value , product.productId)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select></span>
+              </div>
+              <div class="product-price clearfix sdiv2">
+                <span class="price">
+                  <span><span class="woocommerce-Price-currencySymbol">$</span>{{getCalculatedTotal(product.productId ,
+                    product.productDiscountedPrice )}}</span>
+                </span>
+              </div>
+            </td> -->
+
+            <span class="p1">₹{{product.productDiscountedPrice}}</span>
+
+
+          </div>
+
+        </div>
+
+        <hr class="custom-hr">
+
+        <div>
+          <div class="grand-total">
+            <p>SubTotal</p>
+            <span class="p1">₹{{getCalculatedGrandTotal()}}</span>
+          </div>
+
+          <div class="grand-total">
+            <p>Shipping</p>
+            <span class="p1">₹0</span>
+          </div>
+        </div>
+
+
+
+        <hr class="custom-hr">
+
+
+        <div class="grand-total">
+          <p>GrandTotal</p>
+          <span class="p1">₹{{getCalculatedGrandTotal()}}</span>
+        </div>
+
+
+
+
+        <div class="payment">
+          <div class="payment-link">
+            <input value="cod" name="payment_method" id="payment_method_cod" type="radio">
+            <label for="payment_method_cod">cash on delivery (COD)</label>
+          </div>
+          <div class="payment-link">
+            <input value="paypal" name="payment_method" class="input-radio" id="payment_method_paypal" type="radio">
+            <label for="payment_method_paypal">upi transfer</label>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="checkout-button">
+          <!-- <button (click)="checkout()">Checkout</button> -->
+          <button type="submit">PLACE ORDER</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </form>
+</div>
+
+
+
+
+<!-- <div class="product-price">
+  <span class="p1">₹{{product.productDiscountedPrice}}</span>
+  <del>
+    <span class="p2">₹{{product.productActualPrice}}</span>
+  </del>
+</div> -->

@@ -1,0 +1,29 @@
+<div class="container">
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <div class="login-container">
+      <h1 class="login-title">SignUp</h1>
+
+
+
+      <div class="input-box">
+
+        <input ngModel name="userFirstName" id="userFirstName" type="text" placeholder="First Name">
+        <input ngModel name="userLastName" id="userLastName" type="text" placeholder="Last Name">
+        <input ngModel name="userPassword" id="userPassword" type="password" placeholder="Password">
+      </div>
+      <!-- <div class="forgot-pass">
+        <p class="forgotten-pass">Forgot password?</p>
+      </div> -->
+      <button type="submit" class="login-button">Register</button>
+
+      <div class="signup">
+        <p class="forgotten-pass">Already have an account? <span routerLink="/login">Log in</span> </p>
+      </div>
+      <!-- <p>or</p> -->
+      <!-- <div class="social-btn">
+        <button class="social-button">Google</button>
+        <button class="social-button">Facebook</button>
+      </div> -->
+    </div>
+  </form>
+</div>

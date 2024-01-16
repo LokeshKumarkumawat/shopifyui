@@ -1,0 +1,119 @@
+<div class="color-container">
+  <div class="container">
+    <div class="flash">
+
+      <div class="part1">
+        <img src="../../assets/flash.png" alt="">
+
+        <h1>Flash Sale</h1>
+        <p>ends in 00 : 20 : 34</p>
+        <div class="view-all">
+
+          <button>view all</button>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="slider " #slider id="slider">
+        <div class="slide " #slide id="slide">
+
+
+
+          <div class="product-card " *ngFor="let p of productDetails">
+            <!-- <img class="product-image" src="https://i.ibb.co/ZHB9Jnb/ssssss.webp" alt="ssssss" border="0" />
+            <div class="product-details">
+              <h2 class="product-name">name</h2>
+              <div class="prices">
+                <span class="p1">₹1000</span>
+                <del>
+                  <span class="p2">₹10000</span>
+                </del>
+              </div>
+              <h3>⭐rating</h3>
+              <button class="sp-wishlist" type="button" mat-button color="warn">Checkout</button>
+            </div> -->
+
+
+
+
+            <div class="image-container">
+              <img class="product-image" [src]="p.productImages[0].url"  alt="ssssss" border="0" />
+
+            </div>
+
+
+
+            <div class="product-details">
+              <h2 class="product-name">{{p.productName}} </h2>
+              <div class="prices">
+                <span class="p1">₹{{p.productDiscountedPrice}}</span>
+                <del>
+                  <span class="p2">₹{{p.productActualPrice}}</span>
+                </del>
+              </div>
+
+              <div class="rat-ch">
+
+                <h3>⭐ 4.6</h3>
+                <div class="che-btn"  (click)="showProductDetails(p.productId)">Checkout</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="ctl-btn pro-prev" style="display: none;"></div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="ctrl-btn pro-next">
+
+      <svg class="" xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+        <rect width="62" height="62" rx="31" fill="white" />
+        <path
+          d="M42.7071 31.7071C43.0976 31.3166 43.0976 30.6834 42.7071 30.2929L36.3431 23.9289C35.9526 23.5384 35.3195 23.5384 34.9289 23.9289C34.5384 24.3195 34.5384 24.9526 34.9289 25.3431L40.5858 31L34.9289 36.6569C34.5384 37.0474 34.5384 37.6805 34.9289 38.0711C35.3195 38.4616 35.9526 38.4616 36.3431 38.0711L42.7071 31.7071ZM20 32H42V30H20V32Z"
+          fill="#121212" />
+      </svg>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+

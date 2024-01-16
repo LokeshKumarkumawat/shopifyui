@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, h1, h2,h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define basic styles for the page */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+}
+
+
+.container {
+  max-width: 1280px;
+  margin: 57px auto 0 auto ;
+  padding: 5px 10px 5px 10px;
+  /* background-color: #fff; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+
+
+
+h1{
+  font-size: 28px;
+  font-weight: 500;
+}
+
+
+
+h2{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+h3{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+.center-box-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+}
+
+.center-box {
+  text-align: center;
+  /* padding: 20px; */
+}
+
+
+@media (max-width: 468px) {
+
+  .container{
+    margin: 10px auto 0 auto ;
+    padding: 0px 3px 0px 3px;
+
+
+
+  }
+
+
+  body::-webkit-scrollbar {
+    display:none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+   -ms-overflow-style: none; /* IE and EDGE */;
+    scrollbar-width: none; /* Firefox */
+  }
+  body{
+    margin-bottom: 65px;
+    
+  }
+
+
+}
+

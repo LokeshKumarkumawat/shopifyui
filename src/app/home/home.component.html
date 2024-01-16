@@ -1,0 +1,39 @@
+<app-slider ></app-slider>
+<app-categories></app-categories>
+<!-- <app-flash></app-flash> -->
+<div class="container">
+
+  <div class="product-title">
+    Popular Categories
+  </div>
+
+  <div class="product-grid">
+
+    <div *ngFor="let p of productDetails">
+
+      <div class="product-card"  (click)="showProductDetails(p.productId)">
+        <!-- Product 1 Content -->
+        <img class="product-image" [src]="p.productImages[0].url" alt="ssssss" border="0" />
+        <div class="product-details">
+          <h2 class="product-name">{{p.productName}}</h2>
+          <div class="prices">
+            <span class="p1">₹{{p.productDiscountedPrice}}</span>
+            <del>
+              <span class="p2">₹{{p.productActualPrice}}</span>
+            </del>
+          </div>
+          <div class="rat-ch">
+
+            <div class="che-btn"  (click)="showProductDetails(p.productId)">Checkout</div>
+            <h3>⭐ 4.6</h3>
+            <h3 class="shopizy">Shopizy</h3>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

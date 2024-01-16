@@ -1,0 +1,140 @@
+<div class="container">
+
+  <table class="rwd-table">
+    <tbody>
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact No</th>
+        <th>Status</th>
+        <th class="action">Action</th>
+      </tr>
+      <tr *ngFor="let p of orderInfo">
+        <!-- *ngFor="let p of orderInfo" -->
+        <td data-th="Id">
+          {{p.orderId}}
+        </td>
+        <td data-th="Product Name">
+          {{p.product.productName}}
+        </td>
+        <td data-th="	Name">
+          {{p.user.userFirstName}}
+        </td>
+        <td data-th="Address">
+          {{p.orderFullAddress}}
+        </td>
+        <td data-th="Contact No">
+          {{p.orderContactNumber}}
+        </td>
+        <td data-th="Status">
+          <span class="delivered">{{p.orderStatus}}</span>
+        </td>
+        <td data-th="Action" class="action">
+          <button class="btn" *ngIf="p.orderStatus == 'Placed'; else myButton" mat-raised-button color="primary"
+            (click)="markAsDelivered(p.orderId)">
+            Mark as Delivered
+          </button>
+
+          <ng-template #myButton>
+
+            <button class="btn-disable" mat-raised-button color="primary" (click)="markAsDelivered(p.orderId)">
+              Mark as Delivere
+            </button>
+          </ng-template>
+
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+
+<!-- orderAlternateContactNumber
+:
+""
+orderAmount
+:
+46777
+orderCityTown
+:
+""
+orderContactNumber
+:
+""
+orderEmailAddress
+:
+""
+orderFirstName
+:
+""
+orderFullAddress
+:
+""
+orderFullName
+:
+""
+orderId
+:
+12
+orderLastName
+:
+""
+orderMessage
+:
+""
+orderPostCode
+:
+""
+orderStatus
+:
+"Delivered"
+product
+:
+productActualPrice
+:
+30000
+productCategorie
+:
+"mobile"
+productDescription
+:
+"OnePlppus Nord CE 3 Lite 5G (Chromatic Gray, 8GB RAM, 256GB Storage)"
+productDiscountedPrice
+:
+46777
+productId
+:
+7
+productImages
+:
+[{…}]
+productName
+:
+"Samsung Galaxy pppM14 5G"
+[[Prototype]]
+:
+Object
+user
+:
+role
+:
+[{…}]
+userFirstName
+:
+"lokesh"
+userLastName
+:
+"kumawat"
+userPassword
+:
+"$2a$10$4X5Hk/nG0HWdNMcrD2ELHOm81o3.SN8lsyuO9velyCwOMNjrX22Uy"
+[[Prototype]]
+:
+Object
+[[Prototype]]
+:
+Object -->
